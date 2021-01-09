@@ -27,7 +27,15 @@
     font-weight: 300;
 }
 
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon{
+    display: inline-flex;
+    align-items: center;
+}
+
 .header__navbar-item:hover,
+.header__navbar-icon-link:hover,
 .header__navbar-item-link:hover{
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
@@ -49,6 +57,22 @@
     border-left: 2px solid #FB9086;
     top: 12%;
     right: -10px;
+}
+
+/* Icon facebook instagram */
+
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon{
+    font-size: 1.8rem;
+    margin: 0 5px;
+}
+
+.header__navbar-item--no-pointer{
+    cursor: text;
 }
 
 /* -------------------HEADER QR CODE------------------- */
@@ -94,4 +118,115 @@
 
 .header__qr-link:last-child{
     margin-right: 11px;
+}
+
+
+/*------------------------------------------------ NOTIFICATION------------------------------------- */
+
+.header__notify{
+    position: absolute;
+    top: 180%;
+    right: 0;
+    width: 400px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotification ease-in 0.2s;
+    display: none;
+}
+
+.header__notify::before{
+    content: "";
+    border: 25px solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -11%;
+    right: 0%;
+}
+
+.header__notify::after{
+    content: "";
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: -8%;
+    right: 0;
+    background-color: transparent   ;
+}
+
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+} 
+@keyframes headerNotification{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header{
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3{
+    color: #888;
+    margin: 0;
+    padding:14px 0;
+    font-size: 1.4rem;
+    margin-left: 12px;
+}
+
+.header__notify-list{
+    padding-left: 0;
+}
+.header__notify-item{
+    background-color:rgba(238, 77, 45,0.1);
+}
+.header__notify-item:hover{
+    background-color: #f1f1f1;
+}
+
+.header__notify-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+
+}
+.header__notify-img{
+    width: 48px;
+    object-fit: contain;
+}
+.header__notify-info{
+    margin-left: 12px;
+}
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.header__notify-description{
+    display: block;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+
+.header__notify-footer{
+    display: flex;
+}
+
+.header__notify-footer-link{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 14px 0;
+    text-align: center;
+    width: 100%;
 }
