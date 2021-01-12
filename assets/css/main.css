@@ -425,6 +425,7 @@
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--text-color);
+    display: block;
 }
 
 .header__search-input{
@@ -488,6 +489,7 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
+
 
 .header__search-option-item:last-child{
     border-bottom-left-radius: 3px;
