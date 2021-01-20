@@ -64,6 +64,10 @@
     top: -12px; 
 }
 
+.header__navbar-user-item--separate{
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+}
+
 .header__navbar-user-item a{
     text-decoration: none;
     color: var(--text-color);
@@ -91,7 +95,7 @@
 .header__navbar-item,
 .header__navbar-item-link{
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -134,6 +138,10 @@
 .header__navbar-icon-link{
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2){
+    margin-left: 4px;
 }
 
 .header__navbar-icon{
@@ -195,6 +203,8 @@
 
 .header__notify{
     position: absolute;
+    z-index: 1;
+    border-radius: 2px;
     top: 180%;
     right: 0;
     width: 400px;
