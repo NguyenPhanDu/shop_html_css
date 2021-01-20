@@ -12,12 +12,81 @@
     padding-left: 0;
     margin-top:6px;
     margin: 4px 0 0 0;
+    display: flex;
 }
 
 .header__navbar-item{
     margin: 0 8px;
     position: relative;
 }
+
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-avatar{
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.header__navbar-user-name{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu{
+    position: absolute;
+    padding-left: 0;
+    list-style: none;
+    top: 150%;
+    right: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    width: 160px;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgb(184, 183, 183);
+    animation: fadeIn ease-in 0.2s;
+    display: none;
+}
+
+.header__navbar-user-menu::before{
+    content: "";
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    top: -12px; 
+}
+
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 10px 24px;
+    width: 100%;
+}
+
+.header__navbar-user-item a:hover{
+    background-color: #fafafa;
+}
+
+.header__navbar-user-item a:first-child:hover{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:last-child:hover{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
 
 .header__navbar-item,
 .header__navbar-item-link{
