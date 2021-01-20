@@ -111,6 +111,8 @@ html{
     font-size: 1.4rem;
     outline: none;
     cursor: pointer;
+    background-color:white;
+    
 }
 .btn.btn--primary{
     background: var(--primary-color);
